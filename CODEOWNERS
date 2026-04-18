@@ -1,0 +1,217 @@
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# Followed Globstar paths in combination with wildcard paths. Reference https://docs.gitlab.com/ee/user/project/codeowners/reference.html#globstar-paths
+
+# Some paths highlighted as not existing. This may be due to the fact that we use same file for EE repo as well.
+# Before deleting, make sure that the path does not really exist.
+
+app/client/.husky/** @tunacosgun
+app/client/.yarn/** @tunacosgun
+app/client/.editorconfig @tunacosgun
+app/client/.eslintrc.base.json @tunacosgun
+app/client/.eslintrc.js @tunacosgun
+app/client/.gitignore @tunacosgun
+app/client/.lintstagedrc.json @tunacosgun
+app/client/.nvmrc @tunacosgun
+app/client/.prettierignore @tunacosgun
+app/client/.prettierrc @tunacosgun
+app/client/.yarnrc.yml @tunacosgun
+app/client/jest.config.js @tunacosgun
+app/client/knip.json @tunacosgun
+app/client/package.json @tunacosgun
+app/client/tsconfig.json @tunacosgun
+app/client/tsconfig.path.json @tunacosgun
+app/client/packages/utils/** @tunacosgun
+app/client/packages/eslint-plugin/** @tunacosgun
+app/client/config/** @tunacosgun
+app/client/scripts/** @tunacosgun
+
+# App viewers pod
+app/client/src/widgets/** @tunacosgun
+app/client/src/components/propertyControls/** @tunacosgun
+app/client/src/sagas/OneClickBindingSaga.ts @tunacosgun
+app/client/src/WidgetQueryGenerators/** @tunacosgun
+app/client/src/components/editorComponents/WidgetQueryGeneratorForm/** @tunacosgun
+app/client/src/pages/AppViewer/** @tunacosgun
+
+# AI Agents POD
+# AI Agents FE
+app/client/src/widgets/wds/** @tunacosgun
+app/client/src/ee/widgets/wds/** @tunacosgun
+app/client/packages/carbon-connect/** @tunacosgun
+app/client/generators/** @tunacosgun
+app/client/src/actions/canvasSelectionActions.ts @tunacosgun
+app/client/src/actions/reflowActions.ts @tunacosgun
+app/client/src/actions/widgetSelectionActions.ts @tunacosgun
+app/client/src/layoutSystems/anvil/** @tunacosgun
+app/client/src/pages/Editor/Canvas.tsx @tunacosgun
+app/client/src/pages/Editor/CanvasLayoutConversion/** @tunacosgun
+app/client/src/pages/Editor/PropertyPane/** @tunacosgun
+app/client/src/pages/Editor/WidgetsEditor/** @tunacosgun
+app/client/src/reducers/entityReducers/autoHeightReducers/** @tunacosgun
+app/client/src/reflow/** @tunacosgun
+app/client/src/sagas/CanvasSagas/** @tunacosgun
+app/client/src/sagas/ReplaySaga.ts @tunacosgun
+app/client/src/sagas/SnapshotSagas.ts @tunacosgun
+app/client/src/sagas/WidgetAdditionSagas.ts @tunacosgun
+app/client/src/sagas/WidgetBlueprintSagas.ts @tunacosgun
+app/client/src/sagas/WidgetDeletionSagas.ts @tunacosgun
+app/client/src/sagas/WidgetOperationSagas.tsx @tunacosgun
+app/client/src/sagas/WidgetOperationUtils.ts @tunacosgun
+app/client/src/sagas/WidgetSelectUtils.ts @tunacosgun
+app/client/src/sagas/WidgetSelectionSagas.ts @tunacosgun
+app/client/src/sagas/layoutConversionSagas.ts @tunacosgun
+app/client/src/selectors/canvasSelectors.ts @tunacosgun
+app/client/src/selectors/widgetSelectors.ts @tunacosgun
+app/client/src/utils/hooks/useAllowEditorDragToSelect.ts @tunacosgun
+app/client/src/utils/hooks/useClickToSelectWidget.tsx @tunacosgun
+app/client/src/utils/hooks/usePositionedContainerZIndex.ts @tunacosgun
+app/client/src/utils/hooks/useReflow.ts @tunacosgun
+app/client/src/utils/hooks/useWidgetSelection.ts @tunacosgun
+
+# # AI Agents BE
+app/client/packages/rts/src/chat/** @tunacosgun
+app/server/**/appsmith-ai/** @tunacosgun
+app/server/**/ai/** @tunacosgun
+/app/server/appsmith-plugins/appsmithAiPlugin/** @tunacosgun
+
+# WDS team is part of AI Agents POD and responsible for widget design system
+app/client/packages/design-system/** @tunacosgun
+app/client/packages/storybook/** @tunacosgun
+app/client/packages/icons/** @tunacosgun
+
+# Server
+app/server/** @tunacosgun
+
+# Client
+app/client/** @tunacosgun
+
+# New Developers Pod
+app/server/appsmith-server/src/main/java/com/appsmith/server/featureflags/** @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/UserIdentifierService.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/UserIdentifierServiceImpl.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/ce/UserIdentifierServiceCE.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/ce/UserIdentifierServiceCEImpl.java @tunacosgun
+app/server/appsmith-server/src/test/java/com/appsmith/server/services/ce/UserIdentifierServiceCEImplTest.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/CacheableFeatureFlagHelper.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/CacheableFeatureFlagHelperImpl.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/ce/CacheableFeatureFlagHelperCE.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/ce/CacheableFeatureFlagHelperCEImpl.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/ce/FeatureFlagServiceCE.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/ce/FeatureFlagServiceCEImpl.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/FeatureFlagService.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/services/FeatureFlagServiceImpl.java @tunacosgun
+app/server/appsmith-server/src/test/java/com/appsmith/server/services/FeatureFlagServiceTest.java @tunacosgun
+
+# Git Pod
+app/server/appsmith-git/ @tunacosgun
+app/server/**/git/** @tunacosgun
+app/server/**/import/** @tunacosgun
+app/server/**/export/** @tunacosgun
+app/server/**/*Git*.java @tunacosgun
+app/server/**/*Import*.java @tunacosgun
+app/server/**/*Export*.java @tunacosgun
+
+app/server/**/*Environment* @tunacosgun
+
+app/client/src/pages/Editor/gitSync/ @tunacosgun
+app/client/packages/dsl/ @tunacosgun
+
+# Data Platform
+
+app/client/src/actions/datasourceActions.ts @tunacosgun
+app/client/src/api/ActionAPI.tsx @tunacosgun
+app/client/src/ce/components/DSDataFilter/index.tsx @tunacosgun
+app/client/src/ce/constants/ReduxActionConstants.tsx @tunacosgun
+app/client/src/ce/sagas/ApplicationSagas.tsx @tunacosgun
+app/client/src/ce/selectors/environmentSelectors.tsx @tunacosgun
+app/client/src/ce/utils/Environments/index.tsx @tunacosgun
+app/client/src/components/BottomBar/index.tsx @tunacosgun
+app/client/src/components/editorComponents/form/fields/EmbeddedDatasourcePathField.tsx @tunacosgun
+app/client/src/components/formControls/utils.test.ts @tunacosgun
+app/client/src/components/formControls/utils.ts @tunacosgun
+app/client/src/entities/Datasource/index.ts @tunacosgun
+app/client/src/entities/FeatureFlags.ts @tunacosgun
+app/client/src/navigation/FocusEntity.ts @tunacosgun
+app/client/src/pages/Editor/APIEditor/** @tunacosgun
+app/client/src/pages/Editor/DataSourceEditor/** @tunacosgun
+app/client/src/pages/Editor/IntegrationEditor/DatasourceCard.tsx @tunacosgun
+app/client/src/pages/Editor/IntegrationEditor/IntegrationsHomeScreen.tsx @tunacosgun
+app/client/src/pages/Editor/IntegrationEditor/NewApi.tsx @tunacosgun
+app/client/src/pages/Editor/QueryEditor/EditorJSONtoForm.tsx @tunacosgun
+app/client/src/pages/Editor/SaaSEditor/DatasourceCard.tsx @tunacosgun
+app/client/src/pages/Editor/SaaSEditor/DatasourceForm.tsx @tunacosgun
+app/client/src/pages/Editor/gitSync/ReconnectDatasourceModal.tsx @tunacosgun
+app/client/src/pages/common/datasourceAuth/index.tsx @tunacosgun
+app/client/src/reducers/entityReducers/datasourceReducer.ts @tunacosgun
+app/client/src/sagas/ActionExecution/PluginActionSaga.ts @tunacosgun
+app/client/src/sagas/DatasourcesSagas.ts @tunacosgun
+app/client/src/sagas/QueryPaneSagas.ts @tunacosgun
+app/client/src/transformers/RestAPIDatasourceFormTransformer.ts @tunacosgun
+
+
+# Team Managers pod
+app/client/src/pages/Settings/**/* @tunacosgun
+app/client/src/pages/workspace/settings.tsx @tunacosgun
+app/client/src/pages/workspace/AppInviteUsersForm.tsx @tunacosgun
+app/client/src/pages/workspace/WorkspaceInviteUsersForm.tsx @tunacosgun
+app/client/src/components/editorComponents/form/FormDialogComponent.tsx @tunacosgun
+app/client/src/ce/pages/AdminSettings/**/* @tunacosgun
+app/client/src/ee/pages/AdminSettings/**/* @tunacosgun
+app/client/src/ce/pages/Applications/EmbedSnippetTab.tsx @tunacosgun
+app/client/src/ee/pages/Applications/EmbedSnippetTab.tsx @tunacosgun
+app/client/src/ce/pages/Applications/PrivateEmbedSettings.tsx @tunacosgun
+app/client/src/ee/pages/Applications/PrivateEmbedSettings.tsx @tunacosgun
+app/client/src/ce/pages/workspace/Members.tsx @tunacosgun
+app/client/src/ee/pages/workspace/Members.tsx @tunacosgun
+app/client/src/ce/pages/workspace/InviteUsersForm.tsx @tunacosgun
+app/client/src/ee/pages/workspace/InviteUsersForm.tsx @tunacosgun
+app/client/src/ce/pages/Upgrade/**/* @tunacosgun
+app/client/src/ee/pages/Auditlogs/**/* @tunacosgun
+app/client/cypress/e2e/Regression/Enterprise/**/* @tunacosgun
+app/client/cypress/e2e/Regression/EE/Enterprise/**/* @tunacosgun
+app/client/cypress/e2e/Regression/ClientSide/AdminSettings/**/* @tunacosgun
+app/client/cypress/e2e/Regression/ClientSide/Google/**/* @tunacosgun
+app/client/cypress/e2e/Regression/ClientSide/Github/**/* @tunacosgun
+app/client/cypress/e2e/Regression/ClientSide/FormLogin/**/* @tunacosgun
+app/client/cypress/e2e/Regression/ClientSide/Auditlogs/**/* @tunacosgun
+
+# FE pod
+app/client/src/actions/evaluationActions.ts @tunacosgun
+app/client/src/ce/entities/DataTree/**/* @tunacosgun
+app/client/src/ce/entities/DependencyMap/**/* @tunacosgun
+app/client/src/ce/entities/workers/**/* @tunacosgun
+app/client/src/ee/entities/DataTree* @tunacosgun
+app/client/src/ee/entities/workers/**/* @tunacosgun
+app/client/src/sagas/EvaluationsSaga.ts @tunacosgun
+app/client/src/sagas/EvalWorkerActionSagas.ts @tunacosgun
+app/client/src/sagas/LintingSagas.ts @tunacosgun
+app/client/src/sagas/PostEvaluationSags.ts @tunacosgun
+app/client/src/sagas/PostLintingSagas.ts @tunacosgun
+app/client/src/workers/**/* @tunacosgun
+app/client/src/sagas/JSLibrarySaga.ts @tunacosgun
+app/client/src/ce/ActionExecution/ActionExecutionSagas.ts @tunacosgun
+app/client/src/ee/ActionExecution/ActionExecutionSagas.ts @tunacosgun
+app/client/src/ce/JSFunctionExecutionSaga.ts @tunacosgun
+app/client/src/ee/JSFunctionExecutionSaga.ts @tunacosgun
+
+# Enterprise Success
+app/server/appsmith-server/src/main/java/com/appsmith/server/migrations/**/* @tunacosgun @tunacosgun
+
+# DevOps
+deploy/**/* @tunacosgun 
+.github/workflows/*.yml @tunacosgun 
+app/client/packages/ctl/**/* @tunacosgun 
+Dockerfile @tunacosgun 
+
+# Server dependencies
+app/server/**/pom.xml @tunacosgun 
+
+# Repository layer
+app/server/appsmith-server/src/main/java/com/appsmith/server/repositories/ce/BaseAppsmithRepositoryCEImpl.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/repositories/ce/params/QueryAllParams.java @tunacosgun
+app/server/appsmith-server/src/main/java/com/appsmith/server/helpers/ce/bridge/**/* @tunacosgun
+
+# Cypress
+app/client/cypress/**/* @tunacosgun
